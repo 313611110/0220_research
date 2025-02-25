@@ -4,7 +4,7 @@
     <arg name="id"              default="0"     /> 
     <arg name="position_x"      default="0"     />
     <arg name="position_y"      default="0"     />
-    <arg name="max_speed"       default="1"     />
+    <arg name="max_speed"       default="2"     />
     <arg name="camera"          default="0"     />
     <arg name="manipulator"     default="0"     />
     <arg name="smoke_detector"  default="0"     />
@@ -12,13 +12,13 @@
     <!-- Agent's Camera Settings -->
     <arg name="perspective_x"   default="1"     />
     <arg name="perspective_y"   default="1"     />
-    <arg name="angle_of_view"   default="10"    />
-    <arg name="desired_range"   default="3"     />
-    <arg name="camera_variance" default="2"     />
+    <arg name="angle_of_view"   default="40"    />
+    <arg name="desired_range"   default="10"     />
+    <arg name="camera_variance" default="8"     />
 
     <!-- Agent's Manipulator's Setting -->
-    <arg name="arm_length"      default="1"     />
-    <arg name="approx_param"    default="20"    />
+    <arg name="arm_length"      default="2"     />
+    <arg name="approx_param"    default="1"    />
 
     <!-- Agent's Smoke Detector Settings -->
     <arg name="smoke_variance"  default="1"     />

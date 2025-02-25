@@ -19,7 +19,7 @@ class TargetVisualizer:
         rospy.loginfo("Target Visualizer Initialized. Listening for /target updates.")
 
     def target_callback(self, msg):
-        rospy.loginfo(f"Received target data with {len(msg.targets)} targets.")
+        #rospy.loginfo(f"Received target data with {len(msg.targets)} targets.")
 
         for target in msg.targets:
             model_name = f"target_{target.id}"
@@ -38,7 +38,7 @@ class TargetVisualizer:
 
         try:
             self.set_model_state(state)
-            rospy.loginfo(f"Updated position of {model_name} to ({x}, {y})")
+            #rospy.loginfo(f"Updated position of {model_name} to ({x}, {y})")
         except Exception as e:
             rospy.logwarn(f"Failed to update pose for {model_name}: {e}")
 

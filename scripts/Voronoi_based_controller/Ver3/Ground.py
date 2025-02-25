@@ -20,7 +20,7 @@ def norm(arr):
     return sqrt(sum)
 
 def TargetDynamics(x, y, v, seed=0, cnt=0):
-    spd = 0.001  # 速度
+    spd = 0.003  # 速度
     turn_angle = np.random.uniform(-10, 10) * np.pi / 180  # 讓目標隨機轉彎（-10 到 10 度）
 
     # 旋轉速度方向
@@ -45,7 +45,7 @@ def RandomUnitVector():
 
 if __name__ == "__main__":
     rospy.init_node('ground_control_station', anonymous=True, disable_signals=True)
-    rate = rospy.Rate(60)
+    rate = rospy.Rate(30)
 
     target_pub = rospy.Publisher("/target", TargetInfoArray, queue_size=10)
     start_pub   = rospy.Publisher("/start", Int8, queue_size=1)

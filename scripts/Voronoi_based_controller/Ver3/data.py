@@ -69,7 +69,7 @@ class DataCenter():
         self.target_init = True
         self.target = msg
 
-        rospy.loginfo(f"[DataCenter {self.id}] Received {len(msg.targets)} targets.")
+        #rospy.loginfo(f"[DataCenter {self.id}] Received {len(msg.targets)} targets.")
 
     
     def CheckAge(self):

@@ -771,7 +771,7 @@ class PTZCamera():
                     
             self_quality = np.where(self_territory > -1, 0, self_quality)
 
-        rospy.logwarn(f"ComputeSelfQuality({role}, event={event}) sum: {np.sum(self_quality)}")
+        #rospy.logwarn(f"ComputeSelfQuality({role}, event={event}) sum: {np.sum(self_quality)}")
 
         return self_quality
     
@@ -1019,7 +1019,7 @@ if __name__ == "__main__":
     while not rospy.is_shutdown() and not kill and not failure:
         if tick and UAV_self.start:
             UAV_self.Update()
-        
+            
             frame.append(cnt)
             score.append(UAV_self.total_score)
             pos_x.append(UAV_self.pos[0])
@@ -1057,5 +1057,6 @@ if __name__ == "__main__":
     print(df.head())  # 確保數據正確
 
     df.to_csv (save_path + str(id) + ".csv", index=False, header=True)
+    print(f"Trial ID: {trial_id}")
 
 #########################################

@@ -523,7 +523,7 @@ if __name__=="__main__":
                 #"target4_pos_y"                 : target4_pos_y
                 }
         
-    save_path = "/home/andrew/research_ws/src/voronoi_cbsa/result/18/"
+    save_path = "/home/heish/research_ws/src/voronoi_cbsa/result/10/"
     isExist = os.path.exists(save_path)
     if not isExist:
         os.makedirs(save_path)
